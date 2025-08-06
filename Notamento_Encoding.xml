@@ -1,0 +1,999 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Notamento cavato dalli Instrumenti e Privilegii che si conservano
+                    nell'Archivio del monasterio di S. Sebastiano di Napoli: encoding of regests of
+                    charters up to 1199</title>
+                <respStmt>
+                    <resp>Transcribed and compiled by</resp>
+                    <persName>Christian Marcantonio</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>Encoding project for Digitale Edition, 2022/2023</p>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <settlement>Napoli</settlement>
+                        <repository xml:lang="it">Società Napoletana di Storia Patria</repository>
+                        <idno type="BSNSP">ms. XXVIII C. 9</idno>
+                    </msIdentifier>
+                    <msContents>
+                        <msItem>
+                            <author xml:lang="it">Carlo De Lellis</author>
+                            <title xml:lang="la">Notamenta Instrumentorum S. Sebastiani</title>
+                            <msItem n="1">
+                                <locus from="1" to="220">ff. 1-220</locus>
+                                <title xml:lang="la">Notamentum instrumentorum quae conservantur in
+                                    archivio monasterii S. Marcellini Neapolis</title>
+                            </msItem>
+                            <msItem n="2">
+                                <locus from="221" to="237">ff. 221-237</locus>
+                                <title xml:lang="la">Notamentum instrumentorum quae conservantur in
+                                    archivio S. Marie Maioris</title>
+                            </msItem>
+                            <msItem xml:id="Not_Seb" n="3">
+                                <locus from="245" to="652">ff. 245-652</locus>
+                                <title xml:lang="it">Notamento cavato dalli Instrumenti e Privilegii
+                                    che si conservano nell'Archivio del monasterio di S. Sebastiano
+                                    di Napoli</title>
+                            </msItem>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc material="paper">
+                                <support>Paper</support>
+                                <extent>
+                                    <measure unit="pages" quantity="625">645 pages of material
+                                        sources</measure>
+                                </extent>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                    <history>
+                        <origin>Written in <origPlace>Naples</origPlace> during the <origDate
+                                notBefore="1676" notAfter="1691">late XVII</origDate> century by
+                            Carlo De Lellis, a Neapolitan erudite historian and archivist.</origin>
+                        <provenance>The manuscript was acquired by Camillo Minieri Riccio during the
+                            XIX century and later by the famous historian Bartolomeo
+                            Capasso.</provenance>
+                        <acquisition>The manuscript is now kept by Società Napoletana di Storia
+                            Patria.</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation><date notBefore="1676" notAfter="1691">End of 17th century</date><placeName
+                    ref="#L1">Neaples</placeName></creation>
+            <langUsage>
+                <language ident="la">Medieval Latin</language>
+            </langUsage>
+            <abstract xml:lang="en">
+                <p>The manuscript is composed of three different collections of regests of charters
+                    kept by Neapolitan monasteries in the late 17th century. <rs ref="#Not_Seb">The
+                        last section</rs>, the one to be encoded, consists of regests of charters
+                    issued from the 7th to the 17th century and kept in <rs ref="#O6">San
+                        Sebastiano</rs> of Naples in the late 17th century.</p>
+            </abstract>
+            <calendarDesc>
+                <calendar ana="gregorian">
+                    <p xml:lang="en">Gregorian calendar</p>
+                </calendar>
+                <calendar xml:id="Ind" ana="indiction">
+                    <p xml:lang="en">The indiction system is a 15-year cycle used as a chronological unit in
+                        ancient Rome and adopted in some medieval kingdoms. In early medieval
+                        southern Italy the Byzantine was in force: the year began on September 1st
+                        and ended on August 31st of the following year.</p>
+                </calendar>
+            </calendarDesc>
+        </profileDesc>
+        <encodingDesc>
+            <projectDesc xml:lang="en">
+                <p ana="project_aim">The aim of the project is the encoding of the regests collected
+                    in <rs ref="#Not_Seb">Notamento</rs> and that refer to the charters issued until
+                    1199.</p>
+                <p ana="encoding_practice">In addition to the compilation of the <gi>teiHeader</gi>
+                    with the information in possession at the current time, the edition provides the
+                    original to be encoded in jpeg image format through the use of the
+                        <gi>facsimile</gi> element. Given the nature of the source, which is a
+                    collection of abstracts independent of each other, each <gi>surface</gi> element
+                    has more <gi>zone</gi> elements nested, so that each zone could be linked to its
+                    own transcription through the use of <att>start</att> attribute and the
+                        <att>xml:id</att> assigned to each abstract transcribed in the
+                    <gi>body</gi>(N1, N2, N3 etc) and to the <gi>pb</gi> elements (for those cases
+                    where the start of a new page does not correspond to the start of an abstract).
+                    The edition also provides the use of <gi>standOff</gi> element, within which the
+                    following elements are nested: <gi>listOrg</gi>, <gi>listPerson</gi>,
+                        <gi>listPlace</gi>, <gi>listRelation</gi>, <gi>listEvent</gi>. In
+                        <gi>listOrg</gi>, all the organisations are distinguished by the
+                        <att>type</att> attribute. In <gi>listPerson</gi> grops and distinguishes
+                    the various personalities acting in the deeds. Unfortunately, many – if not all
+                    – of them are anonymous, so it was not possible for the moment to enrich each
+                        <gi>person</gi> with further information; <gi>listRelation</gi> is thought
+                    to clarify the relationships between the persons, taking care to specify through
+                    the <att>source</att> attribute the source of that information. The use of
+                        <gi>listPlace</gi> was intended to provide more information about places
+                    (toponyms and micro-toponyms mentioned). When possible, a geolocation reference
+                    of the places was provided when their correspondence with is modern places.
+                        <gi>listEvent</gi> consists of summaries of what is expressed in the
+                    individual regests in <gi>text</gi>. Although it does not add any information to
+                    what is already indicated in the regests, it might be useful in prevision of
+                    historical research on this source, to provide English summaries of the contents
+                    of the regests with appropriate references to people, lands, places. the
+                        <gi>text</gi> consists of more <gi>p</gi> elements nested within, with an
+                        <att>xml:id</att> and an <att>n</att> corresponding to the identification
+                    number of each regest (encoded in the text with the <gi>idno</gi> element). All
+                    the information that could be obtained from the regests are ancoded through the
+                    use of the elements <gi>persName</gi>, <gi>placeName</gi>, <gi>orgName</gi> and
+                        <gi>date</gi>. In addition, the <gi>fw</gi> element recurs on two occasions,
+                    in order to provide maximum fidelity to the source.</p>
+            </projectDesc>
+            <samplingDecl>
+                <p>Samples of the first thirteen regests of charters issued until 1199.</p>
+            </samplingDecl>
+            <editorialDecl xml:lang="en">
+                <normalization>
+                    <p>All latin abbrevions are presented in the extended form.</p>
+                    <p>The transcription of the text follows modern criteria, such as: modern use of
+                        capital letters, separation of words, distinction between "u" and "v", use
+                        of modern punctuation.</p>
+                    <p>The personal names listed in <gi>listPerson</gi> have been normalized in two
+                        forms: an Italian normalization and a Latin one in the nominative case. Only
+                        the names of the Byzantine emperors reported here have a double
+                        normalization in the Italian and English form. Instead, all the
+                        organizations in <gi>listOrg</gi> have been listed with the Italian name
+                        only. As regards places listed in <gi>listPlace</gi>, normalization into
+                        Italian name has been adopted for those places for which identification with
+                        modern locations is certain, for all other locations we preferred to report
+                        only the Latin form. Languages are specified through the use of the
+                        attribute <att>xml:lang</att></p>
+                </normalization>
+                <stdVals>
+                    <p>In each regest transcribed in <gi>text</gi> there are different dating
+                        methods from those currently in force in Europe, for this reason
+                            <gi>date</gi> element involves the attribute <att>when-custom</att> for
+                        encoding the date as reported in the regest, but also an attriute
+                            <att>when</att> which presents a normalised version of the same date.
+                        For those cases in which it is not possible to date back to a precise date,
+                        the use of the <att>notBefore</att> and <att>notAfter</att> attributes has
+                        been adopted.</p>
+                </stdVals>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <surface start="#PB291">
+            <graphic url="291.jpg" width="3000px" height="4000px"/>
+            <zone start="#N1" points="361,1659 2726,1659 2739,2478 390,2405"/>
+            <zone start="#N2" points="377,2350 2710,2440 2710,3304 415,3250"/>
+            <zone start="#N3" points="406,3221 2703,3275 2642,3992 422,3984"/>
+        </surface>
+        <surface start="#PB292">
+            <graphic url="292.jpg" width="2999.6px" height="3999.6px"/>
+            <zone points="671,588 1894,537 1907,703 649,761"/>
+            <zone start="#N4" points="627,943 2751,1011 2767,1459 636,1452"/>
+            <zone start="#N5" points="620,1414 2758,1446 2774,1951 2790,2313 611,2275"/>
+            <zone start="#N6" points="601,2252 2111,2300 2777,2377 2787,3193 1382,3174 582,3132"/>
+            <zone start="#N7" points="569,3113 2790,3177 2777,3846 521,3827"/>
+        </surface>
+        <surface start="#PB293">
+            <graphic url="293.jpg" width="3000.2px" height="4000.2px"/>
+            <zone start="#N8"
+                points="502,347 1430,270 2429,313 2815,366 2846,947 1802,925 1135,937 523,1012"/>
+            <zone start="#N9" points="518,980 1978,930 2858,937 2858,1297 528,1364"/>
+            <zone start="#N10"
+                points="530,1350 2851,1280 2868,1446 2830,1585 2820,1732 2839,1921 1946,1964 1800,1969 1747,1957 1181,1967 1145,1998 550,2008"/>
+            <zone start="#N11"
+                points="523,1979 1819,1984 1836,1945 1901,1943 2844,1914 2887,2456 1111,2574 1061,2634 559,2634"/>
+            <zone start="#N12" points="540,2612 2885,2461 2892,3066 1985,3128 1985,3246 588,3284"/>
+            <zone start="#N13"
+                points="566,3330 2870,3217 2894,3884 2585,3887 2484,3769 2304,3769 2218,3836 598,3913"
+            />
+        </surface>
+        <surface start="#PB294">
+            <graphic url="294.jpg" width="2999.6px" height="3999.6px"/>
+            <zone points="518,370 2713,283 2748,1016 508,1087"/>
+        </surface>
+    </facsimile>
+    <standOff>
+        <listOrg>
+            <org xml:id="O1">
+                <orgName xml:lang="it" type="monastery">San Marcellino</orgName>
+                <state/>
+            </org>
+            <org xml:id="O2" xml:lang="it">
+                <orgName xml:lang="it" type="monastery">Santa Maria</orgName>
+            </org>
+            <org xml:id="O3">
+                <orgName xml:lang="it" type="diocese">San Felice di Nola</orgName>
+            </org>
+            <org xml:id="O4">
+                <orgName xml:lang="it" type="diocese">Chiesa di Napoli</orgName>
+            </org>
+            <org xml:id="O5">
+                <orgName xml:lang="it" type="monastery">Santi Sergio e Bacco</orgName>
+            </org>
+            <org xml:id="O6">
+                <orgName xml:lang="it" type="monastery">Santi Teodoro e Sebastiano</orgName>
+            </org>
+            <org xml:id="O7">
+                <orgName xml:lang="it" type="church">San Severo</orgName>
+            </org>
+            <org xml:id="O8">
+                <orgName xml:lang="it" type="church">San Giuliano</orgName>
+            </org>
+            <org xml:id="O9">
+                <orgName xml:lang="it" type="monastery">Santi Nicandro e Marciano</orgName>
+            </org>
+        </listOrg>
+        <listPerson>
+            <person xml:id="BasilioImp_II" sex="M">
+                <persName xml:lang="it"><forename>Basilio</forename>
+                    <genName>II</genName></persName>
+                <persName xml:lang="en"><forename>Basil</forename>
+                    <genName>II</genName></persName>
+                <note>Co-emperor of the Byzantine empire from the <date when="0960-04-22">960</date>
+                    and emperor <date notBefore="0976-01-10" notAfter="1025-12-15">from 976 to
+                        1025</date>.</note>
+            </person>
+            <person xml:id="CostantinoImp_VIII" sex="M">
+                <persName xml:lang="it"><forename>Constantino</forename>
+                    <genName>VIII</genName></persName>
+                <persName xml:lang="en"><forename>Constantine
+                    <genName>VIII</genName></forename></persName>
+                <note>Co-emperor of the Byzantine empire from the <date when="0962-03-30">962</date>
+                    and emperor <date notBefore="1025-12-15" notAfter="1028-11-11">from 1025 to
+                        1028</date>.</note>
+            </person>
+            <person xml:id="P1" sex="M">
+                <persName xml:lang="la"><forename>Gregorius</forename>
+                    <surname>Pintore</surname></persName>
+                <persName xml:lang="it"><forename>Gregorio</forename>
+                    <surname>Pintore</surname></persName>
+            </person>
+            <person xml:id="P2" sex="F">
+                <persName xml:lang="la"><forename>Anna</forename></persName>
+                <persName xml:lang="it"><forename>Anna</forename></persName>
+            </person>
+            <person xml:id="P3" sex="M">
+                <persName xml:lang="la"><forename>Petrus</forename></persName>
+                <persName xml:lang="it"><forename>Pietro</forename></persName>
+            </person>
+            <person xml:id="P4" sex="F">
+                <persName xml:lang="la"><forename>Ruta</forename></persName>
+                <persName xml:lang="it"><forename>Ruta</forename></persName>
+            </person>
+            <person xml:id="P5" sex="F">
+                <persName xml:lang="la"><forename>Supraxia</forename></persName>
+                <persName xml:lang="it"><forename>Suprassia</forename></persName>
+            </person>
+            <person xml:id="P6" sex="M">
+                <persName xml:lang="la"><forename>Iohannes</forename><surname>Lancia
+                    Longa</surname></persName>
+                <persName xml:lang="it"><forename>Giovanni</forename><surname>Lancia
+                    Longa</surname></persName>
+            </person>
+            <person xml:id="RomanoImp_III" sex="M">
+                <persName xml:lang="it"><forename>Romano</forename>
+                    <genName>III</genName></persName>
+                <persName xml:lang="en"><forename>Romanos</forename>
+                    <genName>III</genName></persName>
+                <note>Emperor of the Byzantine empire <date notBefore="1028-11-12"
+                        notAfter="1034-04-11">frome 1028 to 1034</date></note>
+            </person>
+            <person xml:id="P7" sex="F">
+                <persName xml:lang="la"><forename>Maria</forename></persName>
+                <persName xml:lang="it"><forename>Maria</forename></persName>
+            </person>
+            <person xml:id="P8" sex="M">
+                <persName xml:lang="la"><forename>Staphanus</forename>
+                    <nameLink>de</nameLink>
+                    <placeName>Turre</placeName></persName>
+                <persName xml:lang="it"><forename>Stefano</forename>
+                    <nameLink>di</nameLink>
+                    <placeName>Torre</placeName></persName>
+            </person>
+            <person xml:id="P9" sex="M">
+                <persName xml:lang="la"><forename>Leo</forename></persName>
+                <persName xml:lang="it"><forename>Leone</forename></persName>
+            </person>
+            <person xml:id="P10" sex="M">
+                <persName xml:lang="la"><forename>Anastasius</forename>
+                    <surname>Cacapice</surname></persName>
+                <persName xml:lang="it">
+                    <forename>Anastasio</forename>
+                    <surname>Cacapice</surname></persName>
+            </person>
+            <person xml:id="P11" sex="M">
+                <persName xml:lang="la"><forename>Aligernus</forename>
+                </persName>
+                <persName xml:lang="it">
+                    <forename>Aligerno</forename>
+                </persName>
+            </person>
+            <person xml:id="P12" sex="M">
+                <persName xml:lang="la"><forename>Pirrus</forename>
+                    <surname>Stullicula</surname></persName>
+                <persName xml:lang="it"><forename>Pirro</forename>
+                    <forename>Stullicula</forename></persName>
+            </person>
+            <person xml:id="P13" sex="M">
+                <persName xml:lang="la"><forename>Iohannes</forename></persName>
+                <persName xml:lang="it"><forename>Giovanni</forename></persName>
+            </person>
+            <person xml:id="P14" sex="M">
+                <persName xml:lang="la"><forename>Leo</forename>
+                    <surname>Pappaasinus</surname></persName>
+                <persName xml:lang="it"><forename>Leone</forename>
+                    <surname>Pappaasino</surname></persName>
+            </person>
+            <personGrp xml:id="Siculis">
+                <name type="family_name" xml:lang="la"><surname>Siculis</surname>
+                    <note>Family name of a family with properties in <placeName ref="#L19"
+                            >Pratora</placeName>. The name may suggest that they were originally
+                        from Sicily</note></name>
+            </personGrp>
+            <person xml:id="P15" sex="M">
+                <persName xml:lang="la"><forename>Petrus</forename></persName>
+                <persName xml:lang="it"><forename>Pietro</forename></persName>
+            </person>
+            <person xml:id="P16" sex="M">
+                <persName xml:lang="la"><forename>Stephanus</forename>
+                    <surname>Infelliore</surname></persName>
+                <persName><forename>Stefano</forename>
+                    <surname>Infelliore</surname></persName>
+            </person>
+            <person xml:id="P17" sex="M">
+                <persName xml:lang="la"><forename>Iohannes</forename>
+                    <surname>Brancatius</surname></persName>
+                <persName xml:lang="it"><forename>Giovanni</forename>
+                    <surname>Brancaccio</surname></persName>
+            </person>
+            <person xml:id="P18" sex="M">
+                <persName xml:lang="la"><forename>Iohannes</forename>
+                    <surname>Capice</surname></persName>
+                <persName xml:lang="it"><forename>Giovanni</forename>
+                    <surname><choice>
+                            <orig>Capice</orig>
+                            <reg>Capece</reg>
+                        </choice></surname></persName>
+            </person>
+            <person xml:id="NiceforoImp_II" sex="M">
+                <persName xml:lang="it"><forename>Niceforo</forename>
+                    <genName>II</genName></persName>
+                <persName xml:lang="en"><forename>Nikephoros</forename>
+                    <genName>II</genName></persName>
+                <note>Emperor of Byzantine empire <date notBefore="0963-07-02" notAfter="0969-12-11"
+                        >from 963 to 969</date></note>
+            </person>
+            <person xml:id="P19" sex="M">
+                <persName xml:lang="la"><forename>Gregorius</forename></persName>
+                <persName xml:lang="it"><forename>Gregorio</forename></persName>
+            </person>
+            <person xml:id="P20" sex="M">
+                <persName xml:lang="la"><forename>Stephanus</forename></persName>
+                <persName xml:lang="it"><forename>Stefano</forename></persName>
+            </person>
+            <person xml:id="P21" sex="M">
+                <persName xml:lang="la"><forename>Iohannes</forename></persName>
+                <persName xml:lang="it"><forename>Giovanni</forename></persName>
+            </person>
+            <person xml:id="P22" sex="M">
+                <persName xml:lang="la"><forename>Leo</forename></persName>
+                <persName xml:lang="it"><forename>Leone</forename></persName>
+            </person>
+            <person xml:id="P23" sex="M">
+                <persName xml:lang="la"><forename>Bonus</forename></persName>
+                <persName xml:lang="it"><forename>Bono</forename></persName>
+            </person>
+            <person xml:id="P24" sex="M">
+                <persName xml:lang="la"><forename>Stephanus</forename></persName>
+                <persName xml:lang="it"><forename>Stefano</forename></persName>
+            </person>
+            <person xml:id="P25" sex="M">
+                <persName xml:lang="la"><forename>Leo</forename></persName>
+                <persName xml:lang="it"><forename>Leone</forename></persName>
+            </person>
+            <person xml:id="P26" sex="M">
+                <persName xml:lang="la"><forename>Marinus</forename></persName>
+                <persName xml:lang="it"><forename>Marino</forename></persName>
+            </person>
+            <person xml:id="P27" sex="M">
+                <persName xml:lang="la"><forename>Gregorius</forename></persName>
+                <persName xml:lang="it"><forename>Gregorio</forename></persName>
+            </person>
+            <person xml:id="P28" sex="M">
+                <persName xml:lang="la"><forename>Iohannes</forename></persName>
+                <persName xml:lang="it"><forename>Giovanni</forename></persName>
+            </person>
+            <person xml:id="P29" sex="M">
+                <persName xml:lang="la"><forename>Iohannes</forename></persName>
+                <persName xml:lang="it"><forename>Giovanni</forename></persName>
+            </person>
+            <person xml:id="P30" sex="M">
+                <persName xml:lang="la"><forename>Gregorius</forename></persName>
+                <persName xml:lang="it"><forename>Gregorio</forename></persName>
+            </person>
+            <person xml:id="CostantinoImp_VII" sex="M">
+                <persName xml:lang="it"><forename>Constantino</forename>
+                    <genName>VII</genName></persName>
+                <persName xml:lang="en"><forename>Constantine</forename>
+                    <genName>VII</genName></persName>
+                <note>Co-emperor of the Byzantine empire from <date when="0908-05-15">908</date> and
+                    emperor <date notBefore="0913-06-06" notAfter="0959-11-09">from 913 to
+                        959</date></note>
+            </person>
+            <person xml:id="RomanoImp_II" sex="M">
+                <persName xml:lang="it"><forename>Romano</forename>
+                    <genName>II</genName></persName>
+                <persName xml:lang="la"><forename>Romanos</forename>
+                    <genName>II</genName></persName>
+                <note>Co-emperor of the Byzantine empire from <date when="0945-04-06">945</date> end
+                    emperor <date notBefore="0959-11-09" notAfter="0963-03-15">from 959 to
+                        963</date></note>
+            </person>
+            <person xml:id="P31" sex="M">
+                <persName xml:lang="la"><forename>Stephanus</forename></persName>
+                <persName xml:lang="it"><forename>Stefano</forename></persName>
+            </person>
+            <person xml:id="P32" sex="M">
+                <persName xml:lang="la"><forename>Leo</forename></persName>
+                <persName xml:lang="it"><forename>Leone</forename></persName>
+            </person>
+            <person xml:id="P33" sex="M">
+                <persName xml:lang="la"><forename>Gregorius</forename></persName>
+                <persName xml:lang="it"><forename>Gregorio</forename></persName>
+            </person>
+            <person xml:id="P34" sex="M">
+                <persName xml:lang="la"><forename>Martinus</forename></persName>
+                <persName xml:lang="it"><forename>Martino</forename></persName>
+            </person>
+            <person xml:id="P35" sex="F">
+                <note>Wife of <persName ref="#P34">Martino</persName> whose name is not written in
+                    the source.</note>
+            </person>
+            <person xml:id="P36" sex="M">
+                <persName xml:lang="la"><forename>Iohannes</forename>
+                    <surname>Ferrarius</surname></persName>
+                <persName xml:lang="it"><forename>Giovanni</forename>
+                    <surname>Ferraro</surname></persName>
+            </person>
+            <person xml:id="P37" sex="M">
+                <persName xml:lang="la">
+                    <forename>Cicinus</forename></persName>
+                <persName xml:lang="it">
+                    <forename>Cicino</forename></persName>
+            </person>
+            <person xml:id="P38" sex="M">
+                <persName xml:lang="la"><forename>Aligernus</forename></persName>
+                <persName xml:lang="it"><forename>Aligerno</forename></persName>
+            </person>
+            <personGrp xml:id="Saviniani">
+                <name type="family_name" xml:lang="la">Saviniani</name>
+                <note>NFamily name of a family with properties in <placeName ref="#L9"
+                        >Anglone</placeName>.</note>
+            </personGrp>
+            <person xml:id="P39" sex="M">
+                <persName xml:lang="la"><forename>Petrus</forename>
+                    <forename>Montanino</forename></persName>
+                <persName xml:lang="it"><forename>Pietro</forename>
+                    <forename>Montanino</forename></persName>
+            </person>
+            <person xml:id="P40" sex="M">
+                <persName><forename>Marinus</forename></persName>
+            </person>
+            <person xml:id="P41" sex="M">
+                <persName xml:lang="la"><forename>Sergius</forename></persName>
+                <persName xml:lang="it"><forename>Sergio</forename></persName>
+            </person>
+            <person xml:id="P42" sex="F">
+                <persName xml:lang="la"><forename>Maria</forename></persName>
+                <persName xml:lang="it"><forename>Maria</forename></persName>
+            </person>
+            <person xml:id="P43" sex="M">
+                <persName><forename xml:lang="la">Iohannes</forename></persName>
+                <persName><forename xml:lang="it">Giovanni</forename></persName>
+            </person>
+            <person xml:id="P44" sex="M">
+                <persName xml:lang="la"><forename>Leo</forename></persName>
+                <persName xml:lang="it"><forename>Leone</forename></persName>
+            </person>
+            <person xml:id="P45" sex="M">
+                <note>Unknown man who joined the monastery of <orgName ref="#O6">Santi Teodoro e
+                        Sebastiano</orgName> in Naples as monk.</note>
+            </person>
+            <person xml:id="P46" sex="M">
+                <persName xml:lang="la"><forename>Leo</forename></persName>
+                <persName xml:lang="it"><forename>Leone</forename></persName>
+            </person>
+            <person xml:id="P47" sex="M">
+                <persName xml:lang="la"><forename>Gregorius</forename></persName>
+                <persName xml:lang="it"><forename>Gregorio</forename></persName>
+            </person>
+            <person xml:id="P48" sex="M">
+                <persName xml:lang="la"><forename>Gregorius</forename></persName>
+                <persName xml:lang="it"><forename>Gregorio</forename></persName>
+            </person>
+            <person xml:id="P49" sex="M">
+                <persName xml:lang="la"><forename>Leo</forename></persName>
+                <persName xml:lang="it"><forename>Leone</forename></persName>
+            </person>
+            <person xml:id="P50" sex="M">
+                <persName xml:lang="la"><forename>Sergius</forename>
+                    <surname>Ferrarius</surname></persName>
+                <persName xml:lang="it"><forename>Sergio</forename>
+                    <surname>Ferraro</surname></persName>
+            </person>
+            <personGrp xml:id="Ciminula">
+                <name type="family_name" xml:lang="la">Ciminula</name>
+                <note>Family nme of a family with properties in <placeName ref="#L28">Fratta
+                        Maggiore</placeName></note>
+            </personGrp>
+            <person xml:id="P51" sex="M">
+                <persName xml:lang="la"><forename>Leo</forename></persName>
+                <persName xml:lang="it"><forename>Leone</forename></persName>
+            </person>
+            <person xml:id="P52" sex="M">
+                <persName xml:lang="la"><forename>Iohannes</forename>
+                    <surname>Catonzi</surname></persName>
+                <persName xml:lang="it"><forename>Giovanni</forename>
+                    <surname><choice>
+                            <orig>Catonzi</orig>
+                            <reg>Catozzi</reg>
+                        </choice></surname></persName>
+            </person>
+            <person xml:id="P53" sex="M">
+                <persName xml:lang="la"><forename>Petrus</forename>
+                    <surname><nameLink>de</nameLink> Bona</surname></persName>
+                <persName xml:lang="la"><forename>Pietro</forename>
+                    <surname><nameLink>di</nameLink> Bona</surname></persName>
+            </person>
+            <person xml:id="P54" sex="M">
+                <persName xml:lang="la"><forename>Marinus</forename>
+                    <surname><nameLink>de</nameLink>
+                        <placeName>Turre</placeName></surname></persName>
+                <persName xml:lang="it"><forename>Marino</forename>
+                    <surname><nameLink>di</nameLink>
+                        <placeName>Torre</placeName></surname></persName>
+            </person>
+            <person xml:id="P55" sex="M">
+                <persName xml:lang="la"><forename>Iohannes</forename></persName>
+                <persName xml:lang="it"><forename>Giovanni</forename></persName>
+            </person>
+            <person xml:id="P56" sex="F">
+                <persName xml:lang="la">Drosa</persName>
+                <persName xml:lang="it">Drosa</persName>
+            </person>
+            <person xml:id="P57" sex="F">
+                <persName xml:lang="la">Anna</persName>
+                <persName xml:lang="it">Anna</persName>
+            </person>
+        </listPerson>
+        <listPlace>
+            <place xml:id="L1">
+                <placeName xml:lang="it">Napoli</placeName>
+                <location source="https://www.geonames.org/3172394/naples.html"/>
+            </place>
+            <place xml:id="L2">
+                <placeName xml:lang="it">Soccavo</placeName>
+                <placeName xml:lang="la">subtus Caba</placeName>
+                <location source="https://www.geonames.org/3166465/soccavo.html"/>
+                <place xml:id="L3">
+                    <placeName xml:lang="la">Lama</placeName>
+                    <place xml:id="L4">
+                        <placeName xml:lang="la">terra sita in Lama</placeName>
+                    </place>
+                </place>
+            </place>
+            <place xml:id="L5">
+                <placeName xml:lang="la">Galloro</placeName>
+                <location source="https://www.geonames.org/3180692/capodichino.html"/>
+                <place xml:id="L6">
+                    <placeName xml:lang="la">Nepiliani</placeName>
+                    <place xml:id="L7">
+                        <placeName xml:lang="la">petiam terre sitam in loco Nepiliani</placeName>
+                    </place>
+                </place>
+            </place>
+            <place xml:id="L8">
+                <placeName xml:lang="la">Campo de Miana</placeName>
+                <location source="https://www.geonames.org/3173473/miano.html"/>
+                <place xml:id="L9">
+                    <placeName>Anglone></placeName>
+                    <place xml:id="L10">
+                        <placeName>petiam de terra sita in loco Anglone</placeName>
+                    </place>
+                </place>
+            </place>
+            <place xml:id="L11">
+                <placeName xml:lang="it">Piscinola</placeName>
+                <placeName xml:lang="la">Pischinula</placeName>
+                <location source="https://www.geonames.org/3170631/piscinola.html"/>
+                <place xml:id="L12">
+                    <placeName xml:lang="la">terre in loco qui nominatur Pischinula</placeName>
+                </place>
+            </place>
+            <place xml:id="L13">
+                <placeName xml:lang="it">San Giovanni a Teduccio</placeName>
+                <location source="https://www.geonames.org/3168257/san-giovanni-a-teduccio.html"/>
+                <place xml:id="L14">
+                    <placeName xml:lang="la">Giniolum</placeName>
+                    <place xml:id="L15">
+                        <placeName xml:lang="la">petiam terre postiam in loco qui nominatur Giniolum</placeName>
+                    </place>
+                </place>
+            </place>
+            <place xml:id="L16">
+                <placeName xml:lang="it">Cardito</placeName>
+                <placeName xml:lang="la">Canditi</placeName>
+                <location source="https://www.geonames.org/3180541/cardito.html"/>
+                <place xml:id="L17">
+                    <placeName xml:lang="la">terram sitam in loco qui nominatur Canditi</placeName>
+                </place>
+            </place>
+            <place xml:id="L18">
+                <placeName xml:lang="it">Pomigliano d'Arco</placeName>
+                <placeName xml:lang="la">Pumiliani ad Arcoram dudum aqueductus</placeName>
+                <location source="https://www.geonames.org/3170341/pomigliano-d-arco.html"/>
+                <place xml:id="L19">
+                    <placeName xml:lang="la">Pratora</placeName>
+                    <place xml:id="L20">
+                        <placeName xml:lang="la">terram sitam a Pratora</placeName>
+                    </place>
+                </place>
+            </place>
+            <place xml:id="L21">
+                <placeName xml:lang="it">Mugnano</placeName>
+                <placeName xml:lang="la">Muniani</placeName>
+                <location source="https://www.geonames.org/3172472/mugnano-di-napoli.html"/>
+            </place>
+            <place xml:id="L22">
+                <placeName xml:lang="it">Quarto</placeName>
+                <placeName xml:lang="la">Quarto Maiore</placeName>
+                <location source="https://www.geonames.org/6542330/quarto.html"/>
+                <place xml:id="L23" type="terra">
+                    <placeName xml:lang="la">terre que vocantur Cicanellum</placeName>
+                </place>
+                <place xml:id="L24">
+                    <placeName xml:lang="la">de illa balnearia</placeName>
+                </place>
+                <place xml:id="L25">
+                    <placeName xml:lang="la">petiam terre in Quarto Maiore</placeName>
+                </place>
+                <place xml:id="L26">
+                    <placeName xml:lang="la">petiam terre positam in Quarto Maiore</placeName>
+                </place>
+            </place>
+            <place xml:id="L27">
+                <placeName xml:lang="la">Lancea Asina</placeName>
+                <location source="https://www.geonames.org/3182765/arzano.html"/>
+                <place xml:id="L28">
+                    <placeName xml:lang="it">Frattamaggiore</placeName>
+                    <placeName xml:lang="la">Fracta Maiore</placeName>
+                    <location source="https://www.geonames.org/3176561/frattamaggiore.html"/>
+                    <place xml:id="L29">
+                        <placeName xml:lang="la">petiam terre sitam in Fracta Maiore</placeName>
+                    </place>
+                </place>
+            </place>
+        </listPlace>
+        <listRelation>
+            <relation source="#N1" name="sibling" mutual="#P1 #P2 #P5"/>
+            <relation source="#N1" name="spouse" mutual="#P3 #P4"/>
+            <relation source="#N1" name="parents" active="#P3 #P4" passive="#P1 #P2 #P5"/>
+            <relation source="#N1" name="spouse" mutual="#P5 #P6"/>
+            <relation source="#N2" name="parent" active="#P8" passive="#P7"/>
+            <relation source="#N2" name="spouse" mutual="#P7 #P11"/>
+            <relation source="#N3" name="parent" active="#P14" passive="#P13"/>
+            <relation source="#N6" name="parent" active="#P21" passive="#P20"/>
+            <relation source="#N6" name="parent" active="#P23" passive="#P22"/>
+            <relation source="#N6" name="parent" active="#P26" passive="#P25"/>
+            <relation source="#N6" name="parent" active="#P28" passive="#P27"/>
+            <relation source="#N6" name="parent" active="#P30" passive="#P29"/>
+            <relation source="#N7" name="parent" active="#P32" passive="#P31"/>
+            <relation source="#N7" name="parent" active="#P31" passive="#P33"/>
+            <relation source="#N7" name="sibling" mutual="#P31 #P34"/>
+            <relation source="#N7" name="spouse" mutual="#P35 #P34"/>
+            <relation source="#N8" name="parent" active="#P37" passive="#P36"/>
+            <relation source="#N10" name="parent" active="#P41" passive="#P40"/>
+            <relation source="#N11" name="parent" active="#P43" passive="#P42"/>
+            <relation source="#N11" name="spouse" mutual="#P42 #P44" notAfter="0966-09-09"/>
+            <relation source="#N12" name="parent" active="#P47" passive="#P46"/>
+            <relation source="#N13" name="siblings" mutual="#P48 #P49"/>
+            <relation source="#N13" name="parent" active="#P50" passive="#P48 #P49"/>
+            <relation source="#N13" name="parent" active="#P52" passive="#P51"/>
+        </listRelation>
+        <listEvent>
+            <event when="1016" source="#N1">
+                <desc xml:lang="en"><persName ref="#P1">Gregorio Pintore</persName> and <persName
+                        ref="#P2">Anna</persName> donate a <placeName ref="#L17">land located in
+                        Canditi</placeName> to <persName ref="#P5">Supraxia</persName>.</desc>
+            </event>
+            <event when="1030" source="#N2">
+                <desc xml:lang="en"><persName ref="#P7">Maria</persName> sells to <persName
+                        ref="#P9">Leone</persName> a <placeName ref="#L4">land located in
+                        Lama</placeName>.</desc>
+            </event>
+            <event when="1026" source="#N3">
+                <desc xml:lang="en"><persName ref="#P12">Pirro</persName> sells a <placeName
+                        ref="#L20">land located in Pratora</placeName>.</desc>
+            </event>
+            <event when="1006" source="#N4">
+                <desc xml:lang="en"><persName ref="#P15">Pietro</persName> sells a land to <persName
+                        ref="#P16">Stefano Infelliore</persName>.</desc>
+            </event>
+            <event when="0966" source="#N5">
+                <desc xml:lang="en">Neapolitan bishop <persName ref="#P19">Gregorio</persName>
+                    agrees with the <orgName ref="#O6">monastery of Santi Sergio e Bacco</orgName>
+                    of Naples for the ownership of a <placeName ref="#L23">land called Cicanellum
+                        and located in Quarto</placeName>.</desc>
+            </event>
+            <event when="0947" source="#N6">
+                <desc xml:lang="en"><persName ref="#P20">Stafano</persName> gives <persName
+                        ref="#P22">Leone</persName> and <persName ref="#P24">Stefano</persName> his
+                        <placeName ref="#L24">properties called Ad Illa Balnearia and located in
+                        Quarto</placeName>.</desc>
+            </event>
+            <event when="0990" source="#N7">
+                <desc xml:lang="en"><persName ref="#P31">Stefano</persName> and <persName ref="#P33"
+                        >Gregorio</persName> sell their <placeName ref="#L7">land in
+                        Nepiliani</placeName> to the <persName ref="#P35">wife of
+                    Martino</persName>.</desc>
+            </event>
+            <event when="0970" source="#N8">
+                <desc xml:lang="en"><persName ref="#P36">Giovanni Ferrario</persName> receives a
+                        <placeName ref="#L10">land located in Anglone</placeName>.</desc>
+            </event>
+            <event notBefore="1154-02-26" notAfter="1189-11-18" source="#N9">
+                <desc><persName ref="#P39">Petrus Montanino</persName> agrees for the sale of a
+                        <placeName ref="#L12">land located in Pischinola</placeName>.</desc>
+            </event>
+            <event when="0962" source="#N10">
+                <desc xml:lang="en"><persName ref="#P40">Marino</persName> and <persName ref="#P56"
+                        >Drosa</persName> give monastery of <orgName ref="#O6">Santi Teodoro e
+                        Sebastiano</orgName> a <placeName ref="#L15">land located in
+                        Giniolum</placeName>.</desc>
+            </event>
+            <event when="0966" source="#N11">
+                <desc xml:lang="en"><persName ref="#P42">Maria</persName> gives <orgName ref="#O5"
+                        >monastery of Santi Sergio e Bacco of Naples</orgName> some <placeName
+                        ref="#L25">land located in Quarto</placeName>.</desc>
+            </event>
+            <event when="0962" source="#N12">
+                <desc xml:lang="en"><persName ref="#P45">A new entered</persName> in <orgName
+                        ref="#O6">monastery of Santi Teodoro a Sebastiano</orgName> gives <orgName
+                        ref="#O6">this monastery</orgName> some <placeName ref="#L26">land located
+                        in Quarto</placeName>.</desc>
+            </event>
+            <event when="1016" source="#N13">
+                <desc xml:lang="en"><persName ref="#P48">Gregorio</persName> and <persName
+                        ref="#P49">Leone</persName> give <orgName ref="#O5">monastery of Santi
+                        Sergio e Bacco</orgName> some <placeName ref="#L28">land located in Fracta
+                        Maiore</placeName>.</desc>
+            </event>
+        </listEvent>
+    </standOff>
+    <text corresp="#Not_Seb">
+        <body>
+            <pb n="291" xml:id="PB291"/>
+            <p xml:id="N1" ana="regest" n="192"><date when="1016-11-28" when-custom="Ind:15-11-28"
+                    >Die 28 mensis novembris indictione 15</date>
+                <placeName ref="#L1">Neapoli</placeName>, <date when-custom="BasilioImp_II:57"
+                    notBefore="1016-09-01" notAfter="1017-08-31">imperante Domino nostro <persName
+                        ref="#BasilioImp_II">Basilio Magno Imperatore</persName> anno 57</date> sed
+                et <date when-custom="CostantinoImp_VIII:54" notBefore="1016-09-01"
+                    notAfter="1017-08-31"><persName ref="#CostantinoImp_VII">Constantino fratre
+                            <persName ref="#BasilioImp_II">eius</persName>
+                        <roleName>Magno Imperatore</roleName> anno 54</persName></date>. <persName
+                    ref="#P1">Gregorius Pintore</persName> et <persName ref="#P2">Anna</persName>
+                uterini germana, filii quidam <persName ref="#P3">Petri</persName> e quidam
+                    <persName ref="#P4">Ruta</persName> iugalium, donant <persName ref="#P5"
+                    >Supraxie</persName> uterine germane <rs ref="#P3 #P2">eorum</rs> coniugi
+                    <persName ref="#P6">Ioannis Lancia Longa</persName> quandam <placeName
+                    ref="#L17">terram sitam in loco qui nominatur <placeName ref="#L16"
+                        >Canditi</placeName></placeName>. Numero <idno>192</idno>, olim <idno
+                    ana="original">.M.</idno>.</p>
+            <p xml:id="N2" ana="regest" n="193"><date when="1030-04-08" when-custom="Ind:13-04-08"
+                    >Die 8 mensis aprilis indictione 13</date>, <placeName ref="#L1"
+                    >Neapoli</placeName>, <date when-custom="RomanoImp_III:1" notBefore="1029-09-01"
+                    notAfter="1030-08-31">imperante Domino nostro <persName ref="#RomanoImp_III"
+                        >Romano <roleName>Magno Imperatore</roleName></persName> anno primo</date>.
+                    <persName ref="#P7">Maria</persName> honesta femina, filia quidam <persName
+                    ref="#P8">domini Stephani de Turre</persName>, vendit domino <persName ref="#P9"
+                    >Leoni</persName> corrigiam unam de <placeName ref="#L4">terra sita in
+                        <placeName ref="#L3">Lama</placeName></placeName>, iuxta bona quidam domini
+                    <persName ref="#P10">Anastasii Cacapice</persName>, iuxta bona <orgName
+                    ref="#O1">monasterii Sancti Marcellini</orgName>, <orgName ref="#O2">monasterii
+                    Sancte Marie</orgName> et terram de hominibus de sol et luna in loco <placeName
+                    ref="#L3">Lama</placeName>, <placeName ref="#L2">subtus Caba</placeName>, quam
+                terram vendit cum consensu domini <persName ref="#P11">Aligerni</persName> viri <rs
+                    ref="#P7">sui</rs>. Numero <idno>193</idno>, olim <idno ana="original" n="335"
+                    >CCCXXXV</idno>.</p>
+            <p xml:id="N3" ana="regest" n="194"><date when="1026-05-03" when-custom="Ind:9-05-03"
+                    >Die 3 mensis magii indictione nona</date>, <placeName ref="#L1"
+                    >Neapoli</placeName>, <date when-custom="BasilioImp_II:66"
+                    notBefore="1025-09-01" notAfter="1025-12-15">imperante Domino nostro <persName
+                        ref="#BasilioImp_II">Basilio Magno Imperatore</persName> anno sexagesimo
+                        6<note type="footnote"><persName ref="#BasilioImp_II">Basil II</persName>
+                        died in December 1025, so the reference to his domination in the dating of
+                        the document is an error.</note></date> sed et <date
+                    when-custom="ConstantinoImp_VIII:63" notBefore="1025-09-01"
+                    notAfter="1026-08-31"><persName ref="#CostantinoImp_VIII">Constantino fratre <rs
+                            ref="#BasilioImp_II">suo</rs> Magno Imperatore</persName> anno
+                63</date>. <persName ref="#P12">Pirrus qui nominatur Stullicula</persName>,
+                habitator <placeName ref="#L18">loci Pumiliani ad Arcoram dudum
+                    aqueductus</placeName>, vendit <placeName ref="#L20">terram sitam a <placeName
+                        ref="#L19">Pratora</placeName></placeName>, iuxta bona episcopii <orgName
+                    ref="#SanFeliceNola">Sancti Felicis Nolani</orgName>, et illorum de <persName
+                    ref="#Siculis">Siculis</persName> et <fw type="catch" place="bot-right"
+                    >Ioannes</fw><pb n="292" xml:id="PB292"/>
+                <persName ref="#P13">Ioannes</persName> filii quidam <persName ref="#P14">Leonis
+                    Pappaasini</persName>. Numero <idno>194</idno>.</p>
+            <p xml:id="N4" ana="regest" n="196"><date when="1006-12-21" when-custom="Ind:5-12-21"
+                    >Die 21 mensis decembris indictione 5</date>, <date
+                    when-custom="BasilioImp_II:47" notBefore="1006-09-01" notAfter="1007-08-31"
+                    >imperante Domino nostro <persName ref="#BasilioImp_II">Basilio Magno
+                        Imperatore</persName> anno 47</date> sed et <date
+                    when-custom="CostantinoImp_VIII:44" notBefore="1006-09-01" notAfter="1007-08-31"
+                        ><persName ref="#CostantinoImp_VIII">Constantino fratre <rs
+                            ref="#BasilioImp_II">suo</rs> Magno Imperatore</persName> anno
+                44</date>. <persName>Petrus</persName> de loco <placeName ref="#L21"
+                    >Muniani</placeName> vendit petiam terre domino <persName ref="#P16">Stephano
+                    Infelliore</persName>, iuxta bona domini <persName ref="#P17">Iohannes
+                    Brancatii</persName> et domini <persName ref="#P18">Ioannes Capice</persName>.
+                Numero <idno>196</idno> olim <idno ana="original">.K.</idno></p>
+            <p xml:id="N5" ana="regest" n="197"><date when="0966-03-11" when-custom="Ind:9-03-11"
+                    >Die 11 mensis martii indictione 9</date>, <placeName ref="#L1"
+                    >Neapoli</placeName>, <date when-custom="BasilioImp_II:6" notBefore="0965-09-01"
+                    notAfter="0966-08-31">imperante Domino <persName ref="#BasilioImp_II">nostro
+                        Basilio Magno Imperatore</persName> anno 6</date> sed et <date
+                    when-custom="CostantinoImp_VIII:3" notBefore="1006-09-01" notAfter="1007-08-31"
+                        ><persName ref="#NiceforoImp_II">Niceforio</persName> et <persName
+                        ref="#CostantinoImp_VIII">Constantino</persName> Magnis Imperatoribus anno
+                    3</date>. <persName ref="#P19">Gregorius Gratia Dei piscopus</persName>
+                <orgName ref="#O4">sedis Neapolitane Ecclesie</orgName> convenit cum <orgName
+                    ref="#O5">monasterio Sanctorum Sergii et Bacchi</orgName>, congregato in
+                    <orgName ref="#O6">monasterio Sanctorum Theodori et Sebastani</orgName>, de
+                    <placeName ref="#L23">petia terre que vocantur Cicanellum</placeName>, posita in
+                    <placeName>Quarto Maiore</placeName> in <geogFeat ref="#L23">gualdo</geogFeat>.
+                Et in subscriptione <persName ref="#P19">Gregorius episcopus</persName>. Numero
+                    <idno>197</idno>, olim <idno ana="original" n="42">XXXXII</idno>.</p>
+            <p xml:id="N6" ana="regest" n="198"><date when="0947-03-07" when-custom="Ind:5-03-07"
+                    >Die 7 mensis martii indictione 5</date>, <date
+                    when-custom="CostantinoImp_VII:39" notBefore="0946-09-01" notAfter="0947-08-31"
+                    >imperante Domino nostro <persName ref="#CostantinoImp_VII">Constantino
+                        Perfitogenito Magno Imperatore</persName> anno 39</date> sed et <date
+                    when-custom="RomanoImp_II:2" notBefore="0946-09-01" notAfter="0947-08-31">Romano
+                    Magno Imperatore <rs ref="#CostantinoImp_VII">eius</rs> filio anno 2</date>.
+                    <persName ref="#P20">Stephanus</persName>, filius quidam <persName ref="#P21"
+                    >Ioannis</persName>, disposit in beneficium <persName ref="#P22"
+                    >Leonis</persName>, filii quidam domini <persName ref="#P23">Boni</persName>, et
+                    <persName ref="#P24">Stephani</persName> et tradit <rs ref="#P20">ei</rs> bona
+                posita in <placeName ref="#L22">Quarto Maiora</placeName> necnon pro anima sua
+                    <orgName ref="#O6">monasterio Sanctorum Theodori et Sebastiani</orgName> et bona
+                sunt que vocantur <placeName ref="#L24">de illa balnearia</placeName>. Et inter
+                testes <persName ref="#P25">Leo</persName> filius domini <persName ref="#P26"
+                    >Marini</persName>, <persName ref="#P27">Gregorius</persName> filius domini
+                    <persName ref="#P28">Ioanni</persName>, <persName ref="#P29">Ioannes</persName>
+                filius domini <persName ref="#P30">Gregorii</persName>. Numero <idno>198</idno>,
+                olim <idno ana="original" n="41">XXXXI</idno>.</p>
+            <p xml:id="N7" ana="regest" n="199"><date when="0990-03-09" when-custom="Ind:03-09-03"
+                    >Die 9 martii indictione 3</date>, <placeName ref="#L1">Neapoli</placeName>,
+                    <date when-custom="BasilioImp_II:30" notBefore="0989-09-01"
+                    notAfter="0990-08-31">imperante Domino nostro <persName ref="#BasilioImp_II"
+                        >Basilio Magno Imperatore</persName> anno 30</date> sed et <date
+                    when-custom="CostantinoImp_VIII:27" notBefore="0989-09-01" notAfter="0990-08-31"
+                        ><persName ref="#CostantinoImp_VIII">Constantino Magno Imperatore</persName>
+                    fratre <rs ref="#BasilioImp_II">eius</rs> anno 27</date>. <persName ref="#P31"
+                    >Stephanus</persName>, filius quidam <persName ref="#P32">Leonis</persName>, et
+                    <persName ref="#P33">Gregorius</persName>, hoc est genitor et filius, vendunt
+                petiam terre <persName ref="#P35">coniugi <persName ref="#P34"
+                    >Martini</persName></persName> germani <rs ref="#P31">sui</rs>, <rs ref="#P35"
+                    >habitatori</rs> in <placeName ref="#L5">loco qui nominatur Galloro</placeName>,
+                    <placeName ref="#L7">petiam terre sitam in loco <placeName ref="#L6"
+                        >Nepiliani</placeName></placeName> iuxt bona <orgName ref="#O7">ecclesia
+                    Sancti Severi</orgName>. <idno n="199">Numero 199</idno>, olim <idno
+                    ana="original" n="89">LXXXVIIII</idno>.</p>
+            <pb n="293" xml:id="PB293"/>
+            <p xml:id="N8" ana="regest" n="200"><date when="0970-02-20" when-custom="Ind:13-02-20"
+                    >Die 20 mensis februarii indictione 13</date>, <placeName ref="#L1"
+                    >Neapoli</placeName>, <date when-custom="BasilioImp_II:10"
+                    notBefore="0969-09-01" notAfter="0970-08-31">imperante Domino nostro <persName
+                        ref="#BasilioImp_II">Basilio Magno Imperatore</persName> anno 10</date> sed
+                et <date when-custom="CostantinoImp_VIII:7" notBefore="0969-09-01"
+                    notAfter="0970-08-31"><persName ref="#NiceforoImp_II">Niciforio</persName> et
+                        <persName ref="#CostantinoImp_VIII">Constantino</persName> magnis
+                    Imperatoribus anno 7</date> *** vendit domino<persName ref="#P36"> Ioanni
+                    Ferrario</persName>, filio quidam domini<persName ref="#P37"> Cicini</persName>,
+                    <placeName ref="#L10">petiam de terra sita in loco <placeName ref="#L9"
+                        >Anglone</placeName></placeName>, iuxta bona <persName ref="#P38"
+                    >Aligerni</persName>, <orgName ref="#O9">monasterii Sanctorum Nicandri et
+                    Marciani</orgName> et illorum <persName ref="#Saviniani">Saviniani</persName>,
+                posita in <placeName ref="#L8">Campo de Miana</placeName>. <idno n="200">Numero
+                    200</idno>, olim <idno ana="original" n="187">CLXXXVII</idno>.</p>
+            <p xml:id="N9" ana="regest" n="201"><date notBefore="1154-02-26" notAfter="1189-11-18"
+                    >Tempore Domini nostri Guillelmi Regis Sicilie</date>. <persName ref="#P39"
+                    >Petrus qui nominatur Montanino</persName> convenit pro venditione cuiusdem
+                    <placeName ref="L12">terre in loco qui nominatur <placeName ref="#L11"
+                        >Pischinula</placeName></placeName>, iuxta bona <orgName
+                    ref="#SantiTeodoroeSebastiano">Sancti Sebastiani</orgName>. <idno n="201">Numero
+                    201</idno>, olim <idno ana="original" n="199">CXXXXVIIII</idno>.</p>
+            <p xml:id="N10" ana="regest" n="202"><date when="0962-02-14" when-custom="Ind:5-02-14"
+                    >Die 14 februarii indictione 5</date>, <date when-custom="RomanoImp_II:17"
+                    notBefore="0961-09-01" notAfter="0962-08-31">imperante Domino nostro <persName
+                        ref="#RomanoImp_II">Romano Magno imperatore</persName> anno 17</date> sed et
+                    <date when-custom="BasilioImp_II:2" notBefore="0961-09-01" notAfter="0962-08-31"
+                        ><persName ref="#BasilioImp_II">Basilio Magno Imperatore</persName>
+                    <rs ref="#RomanoImp_II">eius</rs> filio anno 2</date>. <persName ref="#P40"
+                    >Marinus</persName> filius quidam domini <persName ref="#P41">Sergii</persName>,
+                pro parte domina <persName ref="#P56">Drose</persName>
+                <rs ref="#P41">eius</rs> coniugis, donat <orgName ref="#O6">monasterio Sanctorum
+                    Tehodori et Sebastiani</orgName>
+                <placeName ref="#L15">petiam terre postiam in <placeName ref="#L14">loco qui
+                        nominatur Giniolum</placeName></placeName>, pro anima <rs ref="#P40"
+                    >sua</rs> et <persName ref="#P57">Anne</persName> coniugis <rs>sue</rs>. <idno
+                    n="202">Numero 202</idno>, olim <idno ana="original" n="379"
+                >CCCLXXVIIII</idno>.</p>
+            <p xml:id="N11" ana="regest" n="203"><date when="0966-09-09" when-custom="Ind:10-09-09"
+                    >Die 9 septembris indictione 10</date>, <placeName ref="#L1"
+                >Neapoli</placeName>, <date when-custom="BasilioImp_II:7" notBefore="0966-09-01"
+                    notAfter="0967-08-31">imperante Domino nostro Basilio Magno imperatore anno
+                    7</date> sed et <date when-custom="CostantinoImp_VIII:4" notBefore="0966-09-01"
+                    notAfter="0967-08-31"><persName ref="#NiceforoImp_II">Niciforio</persName> et
+                        <persName ref="#CostantinoImp_VIII">Constantino</persName> Magnis
+                    Imperatoribus anno 4</date>. <persName ref="#P42">Maria</persName> filia quidam
+                domini <persName ref="#P43">Ioannis</persName>, relicta domini <persName ref="#P44"
+                    >Leonis</persName>, donat et tradit pro redemptione anime <rs ref="#P42"
+                    >sue</rs>
+                <orgName ref="#O5">monasterio Sanctorum Sergii et Bacchi</orgName>, quod nunc
+                congregatum est in <orgName ref="#O6">monasterio Sanctorum Theodori et
+                    Sebastiani</orgName>, petiam <placeName ref="#L25">terre positam in <placeName
+                        ref="#L22">Quarto Maiore</placeName></placeName>. Numero <idno>203</idno>,
+                olim <idno ana="original" n="329">CCCXXVIIII</idno>.</p>
+            <p xml:id="N12" ana="regest" n="203"><date when="0962-08-04" when-custom="Ind:5-08-04"
+                    >Die 4 augusti indictione 5</date>, <placeName ref="#L1">Neapoli</placeName>,
+                    <date when-custom="RomanoImp_II:17" notBefore="0961-09-01" notAfter="0962-08-31"
+                    >imperante Domino nostro <persName ref="#RomanoImp_II">Romano Magno
+                        Imperatore</persName> anno 17</date> sed et <date
+                    when-custom="BasilioImp_II:2" notBefore="0961-09-01" notAfter="0962-08-31"
+                        ><persName ref="#BasilioImp_II">Basilio Magno Imperatore</persName>
+                    <rs ref="#RomanoImp_II">eius</rs> filio anno 2</date>. <persName ref="#P45"
+                    >Quidam ingressus</persName> est <orgName ref="#O6">monasterium Sanctorum
+                    Theodori et Sebastiani</orgName> et promittit regulam observare et donat <rs
+                    ref="#O6">dicto monasterio</rs>
+                <placeName ref="#L26">petiam terre positam in <placeName ref="#L22">Quarto
+                        Maiore</placeName></placeName> una cum balneuria et cum pischina, iuxta bona
+                    <persName ref="#P46">Leonis</persName> filii <persName ref="#P47">domini
+                    Gregorii</persName> et <orgName ref="#O8">ecclesie Sancte Iuliane</orgName>.
+                Numero <idno>204</idno>, olim <idno ana="original" n="532">CCCCCXXXII</idno></p>
+            <p xml:id="N13" ana="regest" n="204"><date when="1016-11-06" when-custom="Ind:15-11-06"
+                    >Die 6 novembris indictione 15</date>, <placeName ref="#L1">Neapoli</placeName>,
+                    <date when-custom="BasilioImp_II:57" notBefore="1016-09-01"
+                    notAfter="1017-08-31">imperante Domino nostro <persName ref="#BasilioImp_II"
+                        >Basilio Magno Imperatore</persName> anno 57</date> sed et <date
+                    when-custom="CostantinoImp_VIII:54" notBefore="1016-09-01" notAfter="1017-08-31"
+                        ><persName ref="#CostantinoImp_VIII">Constantino fratre <rs
+                            ref="#BasilioImp_II">eius</rs> Magno Imperatore</persName> anno
+                    54</date>. <persName ref="#P48">Gregorius</persName> et <persName ref="#P49"
+                    >Leo</persName> filii quidam <persName ref="#P50">Sergii Ferrarii</persName>
+                donant <orgName ref="#O5">monasterio Sanctorum Sergii et Bacchi</orgName>, quod nunc
+                congregatum est in <orgName ref="#O6">monasterio Sanctorum Theodori <fw type="catch"
+                        place="bot-right">et</fw><pb n="294" xml:id="PB294"/> Sebastiani qui
+                    appellatur Casapicta situm in viridario</orgName>, <placeName ref="#L29">petiam
+                    terre sitam in <placeName ref="#L28">Fracta Maiore</placeName> in loco
+                        <placeName ref="#L27">Lancea Asina</placeName></placeName> iuxta bona de
+                illis <persName ref="#Ciminula">Ciminula</persName>, <persName ref="#P51"
+                    >Leonis</persName> filii quidam <persName ref="#P52">Ioannis Catonzi</persName>,
+                heredum <persName ref="#P53">Petri de Bona</persName> et ibi dominus <persName
+                    ref="#P54">Marinus de Turre</persName> filius quidam domini <persName ref="#P55"
+                    >Ioannis</persName>, cum mensura mensurata ad passum ferreum Sancte Neapolitane
+                Ecclesie. Numero <idno>205</idno>, olim <idno ana="original" n="285"
+                >CCLXXXV</idno>.</p>
+        </body>
+    </text>
+</TEI>
